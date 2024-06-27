@@ -1,8 +1,15 @@
 function calcAverageCalories(days) {
+
+  if (days.length === 0) {
+    return 0;
+  }
+
   let caloriesPerWeek = 0;
+
   for (const part of days) {
     caloriesPerWeek += part.calories;
   }
+  
   return caloriesPerWeek / days.length;
 }
 
